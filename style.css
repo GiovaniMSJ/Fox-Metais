@@ -1,0 +1,299 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+a {
+    text-decoration: none;
+    color: black;
+}
+
+.main-content {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+.white-bg {
+    background-color: rgb(0, 0, 0);
+    color: rgb(255, 255, 255);
+}
+
+.orange-bg {
+    background-color: rgb(255, 136, 0);
+    color: black;
+}
+
+.menu {
+    position: fixed;
+    z-index: 1;
+    top: 0;
+    left: 0;
+    right: 0;
+    width: 100%;
+}
+
+.menu h1 {
+    font-size: 30px;
+    color: rgb(0, 0, 0);
+}
+
+.menu-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0;
+}
+
+.menu ul {
+    list-style: none;
+    display: flex;
+}
+
+.menu ul li a {
+    display: block;
+    padding: 20px;
+    font-size: 20px;
+    position: relative;
+    color: rgb(0, 0, 0);
+}
+
+.menu ul li a::after {
+    content: '';
+    position: absolute;
+    bottom: 10px;
+    left: 50%;
+    width: 0;
+    height: 2px;
+    background: rgb(0, 0, 0);
+    transition: all 300ms ease-in-out;
+}
+
+.menu ul li a:hover::after,
+.menu ul li a:focus::after {
+    width: 50%;
+    left: 25%;
+}
+
+.menu ul li a:focus {
+    outline: 2px dashed rgb(0, 0, 0);
+    outline-offset: 4px;
+}
+
+.menu-spacing {
+    height: 60px;
+}
+
+.materials {
+    min-height: 70vh;
+    background-color: rgb(0, 0, 0);
+    color: white;
+}
+
+.gallery-img {
+    position: relative;
+    width: 100%;
+    max-width: 400px;
+    max-height: 300px;
+    overflow: hidden;
+    transition: transform 0.3s ease-in-out;
+    border: 2px solid rgb(255, 136, 0);
+}
+
+.gallery-img img {
+    width: 100%;
+    height: 200px;
+    display: block;
+}
+
+.gallery-img:hover {
+    transform: scale(1.1);
+}
+
+.material-name {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background-color: rgb(255, 136, 0);
+    color: rgb(0, 0, 0);
+    text-align: center;
+    padding: 5px 0;
+    opacity: 0;
+    transition: opacity 0.3s ease-in-out;
+}
+
+.gallery-img:hover .material-name {
+    opacity: 1;
+}
+
+.grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 30px;
+    counter-reset: grid-counter;
+}
+
+.grid-title {
+    text-align: center;
+    font-size: 40px;
+    margin-bottom: 10px;
+    text-transform: uppercase;
+}
+
+.grid-description {
+    text-align: center;
+    padding-bottom: 30px;
+}
+
+.contact-one {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 50px;
+    font-size: 20px;
+}
+
+.contact-one p {
+    padding-left: 50px;
+}
+
+.location {
+    background-color: rgb(0, 0, 0);
+}
+
+.sobre-nos {
+    text-align: center;
+}
+
+.sobre-nos h2 {
+    font-size: 35px;
+    margin: 10px 0;
+}
+
+.sobre-nos p {
+    margin: 15px 0;
+}
+
+.siga-nas-redes h2 {
+    text-align: center;
+    margin: 10px 0;
+}
+
+.redes-sociais {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 10px;
+    font-size: 30px;
+}
+
+.redes-sociais a {
+    padding-left: 50px;
+    transition: color 0.3s ease-in-out;
+}
+
+.redes-sociais .facebook:hover {
+    color: blue;
+}
+
+.redes-sociais .instagram:hover {
+    color: #d6249f;
+}
+
+.location h2 {
+    text-align: center;
+    color: #fff;
+    font-size: 40px;
+    text-transform: uppercase;
+    margin-bottom: 20px;
+}
+
+.location p {
+    text-align: center;
+    color: #fff;
+    font-size: 20px;
+    margin-bottom: 30px;
+}
+
+
+.mapBox iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border: 0;
+}
+.mapBox {
+    position: relative;
+    width: 600px;
+    height: 450px;
+    background: #fff;
+    margin: 0 auto;
+}
+
+footer {
+    height: 20px;
+}
+
+footer p {
+    text-align: center;
+}
+
+/* Responsividade */
+@media (max-width: 768px) {
+    .grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .menu-content {
+        flex-direction: column;
+    }
+
+    .gallery-img {
+        margin-left: 15px;
+    }
+
+    .mapBox {
+        width: 300px;
+        height: 200px;
+    }
+}
+
+@media (max-width: 480px) {
+    .grid {
+        grid-template-columns: 1fr;
+    }
+
+    .menu ul li a {
+        padding: 10px;
+        font-size: 16px;
+    }
+
+    .menu h1 {
+        font-size: 24px;
+    }
+
+    .gallery-img {
+        margin-left: 5px;
+    }
+
+    .contact-one {
+        margin-left: 80px;
+        flex-direction: column;
+        margin-top: 30px;
+    }
+
+    .contact-one p {
+        margin-top: 5px;
+        padding-left: 20px;
+    }
+
+    .redes-sociais a {
+        padding-left: 20px;
+    }
+
+    .mapBox {
+        padding-bottom: 75%; /* Mantém a proporção 4:3 */
+    }
+}
