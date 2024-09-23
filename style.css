@@ -251,7 +251,7 @@ footer p {
     }
 
     .gallery-img {
-        margin-left: 15px;
+        margin-left: 10px;
     }
 
     .mapBox {
@@ -283,7 +283,7 @@ footer p {
     }
 
     .contact-one {
-        margin-left: 75px;
+        margin-left: 55px;
         flex-direction: column;
         margin-top: 30px;
     }
