@@ -1,96 +1,315 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-BR">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>FoxMetais</title>
-    <link rel="shortcut icon" href="img/favicon.ico" type="image/x-icon">
+    <meta name="description"
+        content="Fox Metais - Especializada em comercialização de sucatas ferrosas e não ferrosas. Fazemos coleta e oferecemos soluções sustentáveis para reciclagem de metais.">
+    <meta name="keywords" content="sucata, metais, ferro, alumínio, reciclagem, coleta, Fox Metais">
+    <title>Fox Metais - Comércio de Sucatas Ferrosas e Não Ferrosas</title>
+    <link rel="shortcut icon" href="img/favicon.ico.png" type="image/x-icon">
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 </head>
+
 <body>
+    <!-- Botão Voltar ao Topo -->
+    <button id="backToTop" class="back-to-top" title="Voltar ao topo">
+        <i class="fa fa-arrow-up"></i>
+    </button>
+
     <header class="menu orange-bg">
         <div class="menu-content main-content">
-            <h1>Fox Metais</h1>
+            <img src="/img/logo.png" alt="Logo da Fox Metais - Comércio de Sucatas" class="logo">
             <nav>
                 <ul>
-                    <li> <a href="#materials">Materiais</a></li>
-                    <li><a href="#contact">Contato</a></li>
-                    <li><a href="#location">Localização</a></li>
+                    <li><a href="#materials" class="nav-link">Materiais</a></li>
+                    <li><a href="#contact" class="nav-link">Contato</a></li>
+                    <li><a href="#location" class="nav-link">Localização</a></li>
                 </ul>
             </nav>
         </div>
     </header>
     <div class="menu-spacing"></div>
+
+    <!-- Seção Hero -->
+    <section class="hero">
+        <div class="main-content">
+            <div class="hero-content">
+                <h1>Fox Metais</h1>
+                <p class="hero-subtitle">Especialistas em comercialização de sucatas ferrosas e não ferrosas</p>
+                <p class="hero-description">Soluções sustentáveis para reciclagem de metais com coleta personalizada</p>
+                <a href="#contact" class="cta-button nav-link">Entre em Contato</a>
+            </div>
+        </div>
+    </section>
+
     <section id="materials" class="materials">
         <div class="main-content">
-            <h2 class="grid-title">Materiais</h2>
-            <p class="grid-description">Trabalhamos com sucatas ferrosas e não ferrosas</p>
+            <h2 class="grid-title">Nossos Materiais</h2>
+            <p class="grid-description">Trabalhamos com sucatas ferrosas e não ferrosas. Entre em contato e saiba mais
+                sobre nossos serviços de coleta e comercialização.</p>
 
             <div class="grid">
-                <div class="gallery-img">
-                    <img src="img/ImagemMistaComGarra.jpeg" alt="imagem que mostra uma garra pegando sucata mista">
-                    <span class="material-name">Sucata Mista</span>
+                <div class="gallery-img" data-material="sucata-mista">
+                    <img src="img/ImagemMistaComGarra.jpeg"
+                        alt="Garra industrial coletando sucata mista para reciclagem" loading="lazy">
+                    <div class="material-overlay">
+                        <span class="material-name">Sucata Mista</span>
+                        <p class="material-description">Diversos tipos de metais misturados</p>
+                    </div>
                 </div>
-                <div class="gallery-img">
-                    <img src="img/ImagemMista.jpeg" alt="imagem que mostra sucatas mistas">
-                    <span class="material-name">Sucata Miuda</span>
+                <div class="gallery-img" data-material="sucata-miuda">
+                    <img src="img/ImagemMista.jpeg" alt="Sucatas metálicas pequenas e diversas para reciclagem"
+                        loading="lazy">
+                    <div class="material-overlay">
+                        <span class="material-name">Sucata Miúda</span>
+                        <p class="material-description">Pequenos pedaços de metal variados</p>
+                    </div>
                 </div>
-                <div class="gallery-img">
-                    <img src="img/ImagemFundido.jpeg" alt="imagem que mostra disco de freios de carro que são ferro fundido">
-                    <span class="material-name">Ferro Fundido</span>
+                <div class="gallery-img" data-material="ferro-fundido">
+                    <img src="img/ImagemFundido.jpeg" alt="Discos de freio de ferro fundido para reciclagem"
+                        loading="lazy">
+                    <div class="material-overlay">
+                        <span class="material-name">Ferro Fundido</span>
+                        <p class="material-description">Peças automotivas e industriais</p>
+                    </div>
                 </div>
-                <div class="gallery-img">
-                    <img src="img/Latinhas.jpeg" alt="Imagem de Latinhas">
-                    <span class="material-name">Latinhas</span>
+                <div class="gallery-img" data-material="latinhas">
+                    <img src="img/Latinhas.jpeg" alt="Latas de alumínio compactadas para reciclagem" loading="lazy">
+                    <div class="material-overlay">
+                        <span class="material-name">Latinhas</span>
+                        <p class="material-description">Latas de alumínio de bebidas</p>
+                    </div>
                 </div>
-                <div class="gallery-img">
-                    <img src="img/ImagemBaterias.jpeg" alt="Imagem que mostra uma palete cheio de sucatas de baterias">
-                    <span class="material-name">Sucata de Bateria</span>
+                <div class="gallery-img" data-material="sucata-bateria">
+                    <img src="img/ImagemBaterias.jpeg" alt="Pallet com sucatas de baterias automotivas para reciclagem"
+                        loading="lazy">
+                    <div class="material-overlay">
+                        <span class="material-name">Sucata de Bateria</span>
+                        <p class="material-description">Baterias automotivas usadas</p>
+                    </div>
                 </div>
-                <div class="gallery-img">
-                    <img src="img/ImagemAluminios.jpeg" alt="Imagem que mostra sucata de aluminio com blocos de motores caixas de cambio">
-                    <span class="material-name">Sucata de Alumínio</span>
+                <div class="gallery-img" data-material="sucata-aluminio">
+                    <img src="img/ImagemAluminios.jpeg" alt="Blocos de motor e peças de alumínio para reciclagem"
+                        loading="lazy">
+                    <div class="material-overlay">
+                        <span class="material-name">Sucata de Alumínio</span>
+                        <p class="material-description">Blocos de motor e peças automotivas</p>
+                    </div>
                 </div>
             </div>
         </div>
     </section>
+
     <section id="contact" class="contact">
         <div class="main-content">
-            <div class="about-us">
-                <h2>Fox Metais</h2>
-                <p>Somos uma empresa especializada na comercialização de sucatas ferrosas e não ferrosas, para fins
-                    siderúrgicos e de fundição. Nossa meta é facilitar e automatizar o processo, fornecendo opções
-                    eficazes para o cliente e a solução para o destino de materiais, sem prejudicar o meio ambiente.
-                </p>
-                <p>Fazemos sua coleta entre em contato para saber mais</p>
+            <div class="contact-content">
+                <div class="about-us">
+                    <h2>Sobre a Fox Metais</h2>
+                    <p>Somos uma empresa especializada na comercialização de sucatas ferrosas e não ferrosas, para fins
+                        siderúrgicos e de fundição. Nossa meta é facilitar e automatizar o processo, fornecendo opções
+                        eficazes para o cliente e a solução para o destino de materiais, sem prejudicar o meio ambiente.
+                    </p>
+                    <p><strong>Fazemos sua coleta! Entre em contato para saber mais.</strong></p>
+                </div>
+
+                <div class="contact-methods">
+                    <div class="contact-info">
+                        <h3>Fale Conosco</h3>
+                        <div class="contact-item">
+                            <a href="https://wa.me/message/6YVLUY7G4IGTK1" class="whats-link" target="_blank"
+                                rel="noopener noreferrer">
+                                <i class="fa fa-whatsapp"></i>
+                                <span>(42) 99145-4793</span>
+                            </a>
+                        </div>
+                        <div class="contact-item">
+                            <a href="mailto:foxmetaispr@gmail.com" class="email-link">
+                                <i class="fa fa-envelope"></i>
+                                <span>foxmetaispr@gmail.com</span>
+                            </a>
+                        </div>
+                    </div>
+
+                    <div class="contact-form-container">
+                        <h3>Solicite um Orçamento</h3>
+                        <form class="contact-form" id="contactForm">
+                            <div class="form-group">
+                                <label for="name">Nome Completo*</label>
+                                <input type="text" id="name" name="name" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="email">E-mail*</label>
+                                <input type="email" id="email" name="email" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="phone">Telefone*</label>
+                                <input type="tel" id="phone" name="phone" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="material">Tipo de Material</label>
+                                <select id="material" name="material">
+                                    <option value="">Selecione o tipo de material</option>
+                                    <option value="sucata-mista">Sucata Mista</option>
+                                    <option value="sucata-miuda">Sucata Miúda</option>
+                                    <option value="ferro-fundido">Ferro Fundido</option>
+                                    <option value="latinhas">Latinhas</option>
+                                    <option value="sucata-bateria">Sucata de Bateria</option>
+                                    <option value="sucata-aluminio">Sucata de Alumínio</option>
+                                    <option value="outros">Outros</option>
+                                </select>
+                            </div>
+                            <div class="form-group">
+                                <label for="message">Mensagem*</label>
+                                <textarea id="message" name="message" rows="4"
+                                    placeholder="Descreva o tipo e quantidade de material que você tem..."
+                                    required></textarea>
+                            </div>
+                            <button type="submit" class="submit-btn">
+                                <i class="fa fa-paper-plane"></i>
+                                Enviar Mensagem
+                            </button>
+                        </form>
+                    </div>
+                </div>
             </div>
-            <div class="contact-one">
-                <a href="https://wa.me/message/6YVLUY7G4IGTK1" class="whats" target="_blank"><p> &#9990; 42 99145-4793</p></a>
-                <p> &#9993; foxmetaispr@gmail.com</p>
-            </div>
-            <div class="follow-on-social-media">
-                <h2>Siga-nos nas redes sociais</h2>
-            </div>
-            <div class="social-media">
-                <a href="https://www.facebook.com/profile.php?id=61564824015275" class="fa fa-facebook facebook" target="_blank"></a>
-                <a href="https://www.instagram.com/foxmetaispr/" class="fa fa-instagram instagram" target="_blank"></a>
-            </div>
-        </div>
-    </section>
-    <section id="location" class="location">
-        <div class="main-content">
-            <h2>Localização</h2>
-            <p>Estamos localizados em:</p>
-            <div class="mapa">
-                <div class="mapBox">
-                    <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d742.6232957743254!2d-50.12746609551411!3d-25.1070675477031!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!5e1!3m2!1spt-BR!2sbr!4v1726792730603!5m2!1spt-BR!2sbr" width="600" height="250" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+
+            <div class="social-section">
+                <div class="follow-on-social-media">
+                    <h3>Siga-nos nas Redes Sociais</h3>
+                </div>
+                <div class="social-media">
+                    <a href="https://www.facebook.com/profile.php?id=61564824015275" class="social-link facebook"
+                        target="_blank" rel="noopener noreferrer" title="Facebook da Fox Metais">
+                        <i class="fa fa-facebook"></i>
+                        <span>Facebook</span>
+                    </a>
+                    <a href="https://www.instagram.com/foxmetaispr/" class="social-link instagram" target="_blank"
+                        rel="noopener noreferrer" title="Instagram da Fox Metais">
+                        <i class="fa fa-instagram"></i>
+                        <span>Instagram</span>
+                    </a>
                 </div>
             </div>
         </div>
     </section>
+
+    <section id="location" class="location">
+        <div class="main-content">
+            <h2>Nossa Localização</h2>
+            <p>Estamos estrategicamente localizados para melhor atendê-lo:</p>
+            <div class="mapa">
+                <div class="mapBox">
+                    <div class="map-loading" id="mapLoading">
+                        <i class="fa fa-spinner fa-spin"></i>
+                        <p>Carregando mapa...</p>
+                    </div>
+                    <iframe
+                        src="https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d742.6232957743254!2d-50.12746609551411!3d-25.1070675477031!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!5e1!3m2!1spt-BR!2sbr!4v1726792730603!5m2!1spt-BR!2sbr"
+                        width="100%" height="400" style="border:0;" allowfullscreen="" loading="lazy"
+                        referrerpolicy="no-referrer-when-downgrade" title="Localização da Fox Metais no Google Maps"
+                        onload="hideMapLoading()">
+                    </iframe>
+                </div>
+            </div>
+        </div>
+    </section>
+
     <footer class="orange-bg">
-        <p>2024 Fox Metais - comércio de sucatas</p>
+        <div class="footer-content">
+            <p>&copy; 2024 Fox Metais - Comércio de Sucatas | Todos os direitos reservados</p>
+            <p class="footer-subtitle">Soluções sustentáveis em reciclagem de metais</p>
+        </div>
     </footer>
+
+    <script>
+        // Smooth scroll para links de navegação
+        document.querySelectorAll('.nav-link').forEach(link => {
+            link.addEventListener('click', function (e) {
+                e.preventDefault();
+                const targetId = this.getAttribute('href');
+                const targetSection = document.querySelector(targetId);
+                if (targetSection) {
+                    targetSection.scrollIntoView({
+                        behavior: 'smooth',
+                        block: 'start'
+                    });
+                }
+            });
+        });
+
+        // Botão voltar ao topo
+        const backToTopButton = document.getElementById('backToTop');
+
+        window.addEventListener('scroll', function () {
+            if (window.pageYOffset > 300) {
+                backToTopButton.classList.add('show');
+            } else {
+                backToTopButton.classList.remove('show');
+            }
+        });
+
+        backToTopButton.addEventListener('click', function () {
+            window.scrollTo({
+                top: 0,
+                behavior: 'smooth'
+            });
+        });
+
+        // Formulário de contato
+        document.getElementById('contactForm').addEventListener('submit', function (e) {
+            e.preventDefault();
+
+            const formData = new FormData(this);
+            const name = formData.get('name');
+            const email = formData.get('email');
+            const phone = formData.get('phone');
+            const material = formData.get('material');
+            const message = formData.get('message');
+
+            // Montar mensagem para WhatsApp
+            const whatsappMessage = `Olá! Meu nome é ${name}.%0A%0A` +
+                `📧 Email: ${email}%0A` +
+                `📱 Telefone: ${phone}%0A` +
+                `🔧 Material: ${material || 'Não especificado'}%0A%0A` +
+                `💬 Mensagem: ${message}`;
+
+            const whatsappUrl = `https://wa.me/5542991454793?text=${whatsappMessage}`;
+            window.open(whatsappUrl, '_blank');
+
+            // Limpar formulário
+            this.reset();
+            alert('Redirecionando para WhatsApp...');
+        });
+
+        // Esconder loading do mapa
+        function hideMapLoading() {
+            const loading = document.getElementById('mapLoading');
+            if (loading) {
+                loading.style.display = 'none';
+            }
+        }
+
+        // Animação dos cards de material
+        const observerOptions = {
+            threshold: 0.1,
+            rootMargin: '0px 0px -50px 0px'
+        };
+
+        const observer = new IntersectionObserver(function (entries) {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('animate-in');
+                }
+            });
+        }, observerOptions);
+
+        document.querySelectorAll('.gallery-img').forEach(img => {
+            observer.observe(img);
+        });
+    </script>
 </body>
+
 </html>
